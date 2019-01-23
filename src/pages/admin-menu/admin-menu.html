@@ -1,0 +1,43 @@
+<ion-header>
+    <meta name="viewport" content="width=device-width" />
+    <ion-navbar color="dark">
+      <ion-title></ion-title>
+      <ion-buttons>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding class="body">
+  <!-- logo -->
+  <ion-img class="img-icon" style="width: 180px; height: 180px;" src="assets/icon/Logo.png"></ion-img>
+  <!-- instruction -->
+  <div padding align="center" class="layout">
+      <b>ESCOGE UNA OPCIÓN</b>
+      <!-- buttons-->
+  </div>
+
+  <div class="row-button">
+      <button ion-button class="button" (click)="JornadasCreationPage()">CREAR JORNADAS</button>
+  </div>
+
+  <div class="row-button">
+      <button ion-button class="button" (click)="JornadasRegionPage()">REVISIÓN DE JORNADAS</button>
+  </div>
+
+  <div class="row-button">
+      <button ion-button class="button">TABLAS DE POSICIONES</button>
+  </div>
+
+  <div class="row-button">
+      <button ion-button class="button" (click)="AdminTeamsCreationMenuPage()">INGRESAR EQUIPOS</button>
+  </div>
+
+  <div class="row-button">
+      <button ion-button class="button" (click)="AdminTeamsReviewMenuPageModule()">VER EQUIPOS</button>
+  </div>
+
+  <div class="row-button">
+      <button ion-button class="button" (click)="usuarios()">USUARIOS</button>
+  </div>
+
+
+</ion-content>

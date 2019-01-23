@@ -1,0 +1,35 @@
+<ion-header>
+  <meta name="viewport" content="width=device-width" />
+</ion-header>
+<ion-content padding class="body">
+
+  
+    <ion-img class="img-icon" style="width: 180px; height: 180px;" src="assets/icon/Logo.png"></ion-img>
+    <div class="layout">
+      <b>LOGIN</b>
+    </div> 
+
+    <div class="form">
+      <div class="row-label">
+        <ion-label floating class="layout">NOMBRE DE CUENTA</ion-label>
+      </div>  
+      <div class="row-input">
+        <ion-input class="holder" type="text"   [(ngModel)]="name"></ion-input>
+      </div>
+     <div class="row-label">
+        <ion-label floating class="layout">CONTRASEÑA</ion-label>
+      </div> 
+      <div class="row-input">     
+        <ion-input class="holder" type="password"  [(ngModel)]="password"></ion-input>
+      </div>
+  
+    <div class="row-button">
+      <button ion-button class="botton" (click)="adminMenu()">INICIAR SESIÓN</button>
+    </div>
+    
+    <div class="layout-message">
+        <b>Si olvido su contraseña contacte al administrador</b>       
+      </div> 
+  </div>  
+  
+</ion-content>

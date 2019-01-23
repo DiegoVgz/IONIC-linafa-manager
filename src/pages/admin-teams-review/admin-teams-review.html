@@ -1,0 +1,37 @@
+<ion-header>
+    <meta name="viewport" content="width=device-width" />
+    <ion-navbar color="dark">
+      <ion-title></ion-title>
+      <ion-buttons>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content style="background-color: black">
+  
+  <div padding align="center" class="layout">
+    <b>VER EQUIPOS</b>
+    </div>
+  
+  <ion-list>
+  
+  <ion-item *ngFor="let team of teams">
+  
+    <ion-avatar>
+        <h2>
+  
+            {{team.name_team}}
+       
+       </h2>
+       
+    </ion-avatar>
+  
+  
+   <button  class="littlebutton" color="secondary" value="{{team.id}}"  (click)="editDAta(team.id)">ELIMINAR</button>
+  
+  </ion-item>
+  
+  </ion-list>
+   
+  
+  
+  </ion-content>

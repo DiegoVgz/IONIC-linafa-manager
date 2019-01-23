@@ -1,0 +1,33 @@
+<ion-header>
+    <meta name="viewport" content="width=device-width" />
+    <ion-navbar color="dark">
+      <ion-title></ion-title>
+      <ion-buttons>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding class="body">
+    <ion-img class="img-icon" style="width: 180px; height: 180px;" src="assets/icon/Logo.png"></ion-img>
+    <div padding align="center" class="layout">
+  
+      <b>CREAR EQUIPOS</b>
+  
+    </div>
+  
+    <ion-label class="label">INGERESE EL NUEVO EQUIPO</ion-label>
+  
+  
+  
+    <div class="form">
+      <div class="row-label">
+        <ion-label floating class="layout">EQUIPO</ion-label>
+      </div>
+      <div class="row-input">
+        <ion-input class="holder" type="text" [(ngModel)]='team'></ion-input>
+      </div>
+    </div>
+  
+    <div class="row-button">
+      <button ion-button class="botton" (click)="insertaTeam()" color="secondary">ACEPTAR</button>
+    </div>
+  </ion-content>

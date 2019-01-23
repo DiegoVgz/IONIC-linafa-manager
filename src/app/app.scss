@@ -1,0 +1,144 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+
+.body{
+    background: #000000;
+    
+  }
+  
+  .img-icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background: #000000;
+  }
+  
+  
+  .layout{
+    color: azure;
+    text-align: center;
+    font-size:calc(100% + 1.2vw);
+    padding: 10px 8px ;
+    
+  }
+
+  .layout-message{
+    color: azure;
+    text-align: center;
+    font-size:100%
+  }
+  
+  .label{
+    font-size: calc(80% + 0.8vw);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 8px ;
+    background-color: black;
+   
+  }
+  
+  .button{
+    width: calc(25% + 0.2vw);
+    font-size:calc(45% + 1.0vw);
+    padding: 25px 20px ;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background: #0b3b96;
+    min-width: 40%;
+  }
+  
+  .littlebutton{
+    width: calc(25% + 0.2vw);
+    font-size:calc(25% + 0.8vw);
+    padding: 2px 0px ;
+    background: #0b3b96;
+    min-width: 15%;
+    height: calc(55% + 0.2vw);
+    margin-top: 0%;
+  }
+  
+  .text-input{
+    background-color: aliceblue;
+   
+  }
+  
+  
+  .holder{
+    color: black;
+    background-color: aliceblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    width: calc(80% + 1.4vw);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+  }  
+  
+.drop-menu{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background-color: forestgreen;
+  font-size:calc(45% + 1.0vw);
+  
+}
+
+  .row-input{
+
+    text-align: center;
+    padding: 15px 10px;
+    
+  }
+  
+
+  .row-label{
+   
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .row-button{
+    
+    text-align: center;
+    padding: 12px 10px;
+    
+  }
+  
+  .form{
+ 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 100px;
+  }
+  
+  .item{
+    background: #000000;
+  }
+  
