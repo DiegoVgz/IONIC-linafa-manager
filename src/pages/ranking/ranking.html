@@ -1,0 +1,53 @@
+<ion-header>
+  <meta name="viewport" content="width=device-width" />
+  <ion-navbar color="dark">
+    <ion-title></ion-title>
+    <ion-buttons>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: black">
+
+  <div padding align="center" class="layout">
+    <b>TABLA</b>
+    <b>POSICIONES</b>
+  </div>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>
+        EQUIPOS
+      </ion-label>
+      <ion-label>
+        PUNTAJES
+      </ion-label>
+      <ion-label>
+        DETALLES
+      </ion-label>
+    </ion-item>
+
+    <ion-item *ngFor="let jornada of jornadas">
+
+
+      <h2>
+        {{jornada.name_team}}
+      </h2>
+
+
+
+      <h2>
+        {{jornada.pts}}
+      </h2>
+
+
+      <button  class="littlebutton" color="secondary" value="{{jornada.id}}"  (click)="editDAta(jornada.id)">DETALLES</button>
+
+
+
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

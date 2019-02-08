@@ -1,0 +1,48 @@
+<ion-header>
+    <meta name="viewport" content="width=device-width" />
+    <ion-navbar color="dark">
+      <ion-title></ion-title>
+      <ion-buttons>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+    <ion-content padding class="body">
+      <ion-img class="img-icon" style="width: 180px; height: 180px;" src="assets/icon/Logo.png"></ion-img>
+      <div padding align="center" class="layout">
+    
+        <b>CONTROL DE USUARIOS</b>
+    
+      </div>
+  
+    
+        <div class="form">
+          <div class="row-label">
+            <ion-label floating class="layout">USUARIO</ion-label>
+          </div>  
+          <div class="row-input">
+            <ion-input class="holder" type="text" [(ngModel)]="name" value="{{p_name}}">
+              {{p_name}}
+            </ion-input>
+          </div>
+         <div class="row-label">
+            <ion-label floating class="layout">CONTRASEÑA</ion-label>
+          </div> 
+          <div class="row-input">     
+            <ion-input class="holder" type="text" [(ngModel)]="pass" value="{{p_pass}}">
+              {{p_pass}}
+            </ion-input>
+            <ion-label floating class="layout">TELEFONO</ion-label>
+          </div> 
+          <div class="row-input">     
+            <ion-input class="holder" type="text" [(ngModel)]="phone" value="{{p_phone}}">
+              {{p_phone}}
+            </ion-input>
+          </div> 
+          
+          </div>
+    
+      <div class="row-button">
+        <button ion-button class="botton" color="secondary" (click)="edit()">ACEPTAR</button>
+      </div>
+    </ion-content>
+    
