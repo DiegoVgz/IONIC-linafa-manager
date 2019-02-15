@@ -112,10 +112,7 @@ export class AdminTeamsCreationPage {
     this.respuesta = this.http.post(url, data);
     this.respuesta.subscribe(respuesta => {
 
-
     })
-
-
 
   }
 
