@@ -21,14 +21,14 @@ export class AdminTeamsCreationPage {
   public insertingTeam: any;
   public team: any;
 
-  respuesta:any;
+  respuesta: any;
   data: Observable<any>;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public alerta:AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public alerta: AlertController) {
     this.incomingTeam = navParams.get('creation');
 
   }
 
- 
+
   insertaTeam() {
     this.insertingTeam = {
       "name_team": this.team,
@@ -46,16 +46,16 @@ export class AdminTeamsCreationPage {
 
     const alert = this.alerta.create({
       message: 'EL EQUIPO HA SIDO INGRESADO EXITOSAMENTE',
-      buttons: ['ACCEPTAR']
+      buttons: ['ACEPTAR']
     });
 
-     alert.present();
+    alert.present();
   }
 
 
   async presentAlertConfirm() {
     const alerta = await this.alerta.create({
-      
+
       message: '<strong>¿ESTA SEGURO QUE DESEA ELIMINAR LOS EQUIPOS?</strong>',
       buttons: [
         {
@@ -74,9 +74,9 @@ export class AdminTeamsCreationPage {
               message: 'LOS EQUIPOS HAN SIDO ELIMINADOS EXITOSAMENTE',
               buttons: ['ACCEPTAR']
             });
-        
-           alert.present();
-          
+
+            alert.present();
+
           }
         }
       ]
@@ -89,13 +89,13 @@ export class AdminTeamsCreationPage {
 
 
     let url = 'http://localhost:3000/teams/deleteTeam';
-   
-    let data={
+
+    let data = {
       "region": this.incomingTeam.region,
       "division": this.incomingTeam.division,
       "group": this.incomingTeam.group
     }
-    this.respuesta = this.http.post(url,data);
+    this.respuesta = this.http.post(url, data);
     this.respuesta.subscribe(respuesta => {
 
 
@@ -103,6 +103,6 @@ export class AdminTeamsCreationPage {
 
 
 
-}
+  }
 
 }

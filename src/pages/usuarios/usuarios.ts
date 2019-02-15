@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import config from '../../config/production.js';
 
 /**
  * Generated class for the UsuariosPage page.
@@ -18,12 +19,12 @@ export class UsuariosPage {
 
   public rows: any;
   public id: any;
-  public other:any;
+  public other: any;
 
-  p_id='';
-  p_name='';
-  p_pass='';
-  p_phone='';
+  p_id = '';
+  p_name = '';
+  p_pass = '';
+  p_phone = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
 
@@ -33,14 +34,14 @@ export class UsuariosPage {
   getData() {
 
     let key = {
-     "key":"patata123god"
+      "key": "patata123god"
     };
-    let data: any = this.http.post('http://localhost:3000/user/getUsers',key);
+    let data: any = this.http.post(`${config.app.url}/user/getUsers`, key);
     data.subscribe(
       data => {
         this.rows = data;
         console.log(this.rows);
-        
+
       }
 
     )
@@ -48,27 +49,27 @@ export class UsuariosPage {
   }
 
 
-editDAta(f){
+  editDAta(f) {
 
 
-  for (var item of this.rows) {
+    for (var item of this.rows) {
 
-      if(item.id==f){
+      if (item.id == f) {
 
-        console.log("id"+f)
-        console.log("id"+item.id)
+        console.log("id" + f)
+        console.log("id" + item.id)
         this.p_id = item.id;
-        this.p_name= item.user_name;
-        this.p_pass= item.pass_login;
-        this.p_phone= item.phone_number;
+        this.p_name = item.user_name;
+        this.p_pass = item.pass_login;
+        this.p_phone = item.phone_number;
 
-     
-      this.navCtrl.push("JornadasEditUsersAdminPage",{p_id:this.p_id,p_name:this.p_name,p_pass:this.p_pass,p_phone:this.p_phone});
+
+        this.navCtrl.push("JornadasEditUsersAdminPage", { p_id: this.p_id, p_name: this.p_name, p_pass: this.p_pass, p_phone: this.p_phone });
 
       }
     }
 
-}
+  }
 
 
 

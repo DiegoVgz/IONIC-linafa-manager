@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the JornadasRegionPage page.
@@ -15,17 +15,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class JornadasRegionPage {
 
- 
-  public region = '';
-  public division = '';
-  public group = '';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  public region: '';
+  public division: '';
+  public group: '';
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alerta: AlertController) {
   }
 
 
   JornadasReviewPage() {
-    this.navCtrl.push("JornadasReviewPage", { region: this.region, division: this.division, group: this.group });
+    if (this.region == undefined || this.division == undefined || this.group == undefined) {
+      const alert = this.alerta.create({
+        message: 'POR FAVOR INGRESE LOS DATOS CORRESPONDIENTES',
+        buttons: ['ACEPTAR']
+      });
+      alert.present();
+    } else {
+      this.navCtrl.push("JornadasReviewPage", { region: this.region, division: this.division, group: this.group });
+    }
   }
- 
+
 
 }

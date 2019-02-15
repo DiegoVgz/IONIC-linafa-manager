@@ -1,52 +1,41 @@
 <ion-header>
-    <meta name="viewport" content="width=device-width" />
-    <ion-navbar color="dark">
-      <ion-title></ion-title>
-      <ion-buttons>
-      </ion-buttons>
-    </ion-navbar>
-  </ion-header>
+  <meta name="viewport" content="width=device-width" />
+  <ion-navbar color="dark">
+    <ion-title></ion-title>
+    <ion-buttons>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 <ion-content style="background-color: black">
 
   <div padding align="center" class="layout">
     <b>REVISION DE JORNADAS</b>
-    </div>
+  </div>
 
- <ion-list>
+  <ion-list>
 
-  <ion-item *ngFor="let jornada of jornadas">
+    <ion-item *ngFor="let jornada of jornadas">
 
-    <ion-avatar>
+      <ion-avatar>
         <h2>
 
-            {{jornada.jornada_name}}
-       
-       </h2>
-       
-    </ion-avatar>
+          {{jornada.jornada_name}}
 
-   
-    <h2>
+        </h2>
 
-        {{jornada.local_team_name}} VS  {{jornada.visitant_team_name}}
-        
-   
-   </h2>
+      </ion-avatar>
 
-   <button  class="littlebutton" color="secondary" value="{{jornada.id}}"  (click)="editDAta(jornada.id)">REVISAR</button>
 
-  </ion-item>
+      <h2>
 
- </ion-list>
-   
+        {{jornada.local_team_name}} VS {{jornada.visitant_team_name}}
 
- <ion-list>
-  <ion-item>
- <div clas="button-row">
 
- <button  class="littlebutton" (click)="secondRound()">SEGUNDA RONDA</button>
+      </h2>
 
- </div>
-</ion-item>
-</ion-list>
+      <button ion-button class="botton" color="secondary" value="{{jornada.id}}" (click)="editDAta(jornada.id)">REVISAR</button>
+
+    </ion-item>
+
+  </ion-list>
 </ion-content>
