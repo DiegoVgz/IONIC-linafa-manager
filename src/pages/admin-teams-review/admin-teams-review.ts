@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import { HomePage } from '../home/home';
+import config from '../../config/production.js';
 
 /**
  * Generated class for the AdminTeamsReviewPage page.
@@ -28,12 +30,14 @@ export class AdminTeamsReviewPage {
     this.region = navParams.get('region');
     this.division = navParams.get('division');
     this.group = navParams.get('group');
-    console.log(this.region);
+    if (this.region == undefined){
+      this.navCtrl.push(HomePage);
+    }
     this.getTeams();
   }
 
   getTeams() {
-    let url = 'http://localhost:3000/teams/allTeams';
+    let url = `${config.app.url}/teams/allTeams`;
     let datos = {
       "region": this.region,
       "division": this.division,

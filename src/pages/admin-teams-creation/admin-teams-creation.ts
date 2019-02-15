@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the AdminTeamsCreationPage page.
@@ -25,7 +26,9 @@ export class AdminTeamsCreationPage {
   data: Observable<any>;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public alerta:AlertController) {
     this.incomingTeam = navParams.get('creation');
-
+    if (this.incomingTeam == undefined){
+      this.navCtrl.push(HomePage);
+    }
   }
 
  
@@ -36,8 +39,16 @@ export class AdminTeamsCreationPage {
       "division": this.incomingTeam.division,
       "group": this.incomingTeam.group
     }
+if(this.team==null){
+  const alert = this.alerta.create({
+    message: 'PORFAVOR INGRESE LOS DATOS CORRESPONDIENTES',
+    buttons: ['ACCEPTAR']
+  });
 
-    let url = 'http://localhost:3000/teams/addTeam';
+   alert.present();
+}else{
+
+  let url = 'http://localhost:3000/teams/addTeam';
 
     this.data = this.http.post(url, this.insertingTeam);
     this.data.subscribe(data => {
@@ -50,6 +61,9 @@ export class AdminTeamsCreationPage {
     });
 
      alert.present();
+     this.team=null;
+}
+  
   }
 
 

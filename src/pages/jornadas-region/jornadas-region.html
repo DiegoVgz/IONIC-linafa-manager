@@ -15,43 +15,86 @@
     </div>
   
   
-    <ion-label class="label">ESCOGER REGION</ion-label>
-    <ion-item style="background-color: #000000ce; color: #ffffff">
-      <ion-select [(ngModel)]="region" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu" style="background-color: #15ad29ce; color: #ffffff">
-        <ion-option value="san jose">SAN JOSÉ</ion-option>
-        <ion-option value="cartago">CARTAGO</ion-option>
-        <ion-option value="puntarenas">PUNTARENAS</ion-option>
-        <ion-option value="guanacaste">GUANACASTE</ion-option>
-        <ion-option value="limon">LIMÓN</ion-option>
-        <ion-option value="alajuela">ALAJUELA</ion-option>
-        <ion-option value="heredia">HEREDIA</ion-option>
-      </ion-select>
-    </ion-item>
-  
-  
-    <ion-label class="label">ESCOGER DIVISION</ion-label>
-    <ion-item  style="background-color: #000000ce; color: #ffffff">
-      <ion-select [(ngModel)]="division" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA"  class="drop-menu" style="background-color: #15ad29ce; color: #ffffff">     
-        <ion-option value="primera">1° </ion-option>   
-        <ion-option value="tercera">3° </ion-option>
-        <ion-option value="CUARTA DIVISION">4° </ion-option>
-        <ion-option value="QUINTA DIVISION">5° </ion-option>
-        <ion-option value="SEXTA DIVISION">6° </ion-option>
-        <ion-option value="SETIMA DIVISION">7° </ion-option>
-        <ion-option value="OCTAVA DIVISION">8°</ion-option>
-        <ion-option value="NOVENA DIVISION">9° </ion-option>
-        <ion-option value="DECIMA DIVISION">10°</ion-option>
-      </ion-select>
-    </ion-item>
-  
-  
-    <ion-label class="label">ESCOGER GRUPO</ion-label>
-    <ion-item  style="background-color: #000000ce; color: #ffffff">
-      <ion-select [(ngModel)]="group" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu" style="background-color: #15ad29ce; color: #ffffff">
-        <ion-option value="A">A</ion-option>
-        <ion-option value="B">B</ion-option>    
-      </ion-select>
-    </ion-item>
+   
+  <ion-label class="label">ESCOGER REGION</ion-label>
+  <ion-item style="background-color: #000000ce; color: #ffffff">
+    <ion-select [(ngModel)]="region" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu"
+      style="background-color: #15ad29ce; color: #ffffff">
+      <ion-option value="Limon">LIMON</ion-option>
+      <ion-option value="Bataan">BATAÁN</ion-option>
+      <ion-option value="Talamanca">TALAMANCA</ion-option>
+      <ion-option value="Guapiles">GUÁPILES</ion-option>
+      <ion-option value="Turrialba">TURRIALBA</ion-option>
+      <ion-option value="Cartagp">CARTAGO</ion-option>
+      <ion-option value="Goicoechea">GOICOECHEA</ion-option>
+      <ion-option value="Perez Zeledon">PEREZ ZELEDON</ion-option>
+      <ion-option value="Terraba">TÉRRABA</ion-option>
+      <ion-option value="San Jose">SAN JOSÉ</ion-option>
+      <ion-option value="Metropolitana">METROPOLITANA</ion-option>
+      <ion-option value="Santa Ana">SANTA ANA</ion-option>
+      <ion-option value="Heredia">HEREDIA</ion-option>
+      <ion-option value="Alajuela">ALAJUELA</ion-option>
+      <ion-option value="Liberia">LIBERIA</ion-option>
+      <ion-option value="Carrillo">CARRILLO</ion-option>
+      <ion-option value="Santa Ana">SANTA CRUZ</ion-option>
+      <ion-option value="Puntarenas">PUNTARENAS</ion-option>
+      <ion-option value="Nicoya">NICOYA</ion-option>
+      <ion-option value="Cuidad Neilly">CIUDAD NEILLY</ion-option>
+      <ion-option value="San Carlos">SAN CARLOS</ion-option>
+      <ion-option value="Desamparados">DESAMPARADOS</ion-option>
+      <ion-option value="Acosta">ACOSTA</ion-option>
+      <ion-option value="Quepos">QUEPOS</ion-option>
+      <ion-option value="Esparza">ESPARZA</ion-option>
+      <ion-option value="Siquirres">SIQUIRRES</ion-option>
+      <ion-option value="Central">CENTRAL</ion-option>
+      <ion-option value="Costa Rica">COSTA RICA</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+ 
+
+
+
+  <ion-label class="label">ESCOGER DIVISION</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select [(ngModel)]="division" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+          <ion-option value="primera">1° </ion-option>
+          <ion-option value="tercera">3° </ion-option>
+          <ion-option value="cuarta">4° </ion-option>
+          <ion-option value="quinta">5° </ion-option>
+          <ion-option value="sexta">6° </ion-option>
+          <ion-option value="setima">7° </ion-option>
+          <ion-option value="octava">8°</ion-option>
+          <ion-option value="novena">9° </ion-option>
+          <ion-option value="decima">10°</ion-option>
+        </ion-select>
+      </ion-item>
+    
+    
+      <ion-label class="label">ESCOGER GRUPO</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select [(ngModel)]="group" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+          <ion-option value="A">A</ion-option>
+          <ion-option value="B">B</ion-option>
+          <ion-option value="C">C</ion-option>
+          <ion-option value="D">D</ion-option>
+          <ion-option value="E">E</ion-option>
+          <ion-option value="F">F</ion-option>
+          <ion-option value="G">G</ion-option>
+          <ion-option value="H">H</ion-option>
+          <ion-option value="I">I</ion-option>
+          <ion-option value="J">J</ion-option>
+          <ion-option value="S-A">S-A</ion-option>
+          <ion-option value="S-B">S-B</ion-option>
+          <ion-option value="FINAL">FINAL</ion-option>
+        </ion-select>
+      </ion-item>
+    
+
+
   
   
   
