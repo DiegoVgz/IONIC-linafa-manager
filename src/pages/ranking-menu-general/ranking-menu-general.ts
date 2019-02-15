@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the RankingMenuGeneralPage page.
@@ -18,11 +18,23 @@ export class RankingMenuGeneralPage {
   public division = '';
   public group = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public alerta:AlertController) {
   }
 
    JornadasReviewPage() {
+    console.log(this.division);
+    if(this.region=="" || this.division==""){
+      console.log(this.division);
+      const alert = this.alerta.create({
+        message: 'PORFAVOR INGRESE LOS DATOS CORRESPONDIENTES',
+        buttons: ['ACCEPTAR']
+      });
+  
+       alert.present();
+
+
+    }else{
     this.navCtrl.push("RankingPage", { region: this.region, division: this.division, group: this.group });
   }
-
+   }
 }
