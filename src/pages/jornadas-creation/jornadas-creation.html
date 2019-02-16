@@ -14,29 +14,42 @@
     
       </div>
     
+      <ion-label class="label">ESCOGER DIVISION</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select [(ngModel)]="division" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+          <ion-option value="primera">1° </ion-option>
+          <ion-option value="tercera">3° </ion-option>
+          <ion-option value="cuarta">4° </ion-option>
+          <ion-option value="quinta">5° </ion-option>
+          <ion-option value="sexta">6° </ion-option>
+          <ion-option value="setima">7° </ion-option>
+          <ion-option value="octava">8°</ion-option>
+          <ion-option value="novena">9° </ion-option>
+          <ion-option value="decima">10°</ion-option>
+        </ion-select>
+      </ion-item>
   
-        <ion-label class="label">ESCOGER DIVISION</ion-label>
-        <ion-item  style="background-color: #000000ce; color: #ffffff">
-          <ion-select [(ngModel)]="division" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA"  class="drop-menu" style="background-color: #15ad29ce; color: #ffffff">       
-            <ion-option value="tercera">3° </ion-option>
-            <ion-option value="cuarta">4° </ion-option>
-            <ion-option value="quinta">5° </ion-option>
-            <ion-option value="sexta">6° </ion-option>
-            <ion-option value="setima">7° </ion-option>
-            <ion-option value="octava">8°</ion-option>
-            <ion-option value="novena">9° </ion-option>
-            <ion-option value="decima">10°</ion-option>
-          </ion-select>
-        </ion-item>
-    
-    
-        <ion-label class="label">ESCOGER GRUPO</ion-label>
-        <ion-item  style="background-color: #000000ce; color: #ffffff">
-          <ion-select [(ngModel)]="group" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu" style="background-color: #15ad29ce; color: #ffffff">
-            <ion-option value="A">A</ion-option>
-            <ion-option value="B">B</ion-option>    
-          </ion-select>
-        </ion-item>
+  
+      <ion-label class="label">ESCOGER GRUPO</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select [(ngModel)]="group" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE UNA" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+          <ion-option value="A">A</ion-option>
+          <ion-option value="B">B</ion-option>
+          <ion-option value="C">C</ion-option>
+          <ion-option value="D">D</ion-option>
+          <ion-option value="E">E</ion-option>
+          <ion-option value="F">F</ion-option>
+          <ion-option value="G">G</ion-option>
+          <ion-option value="H">H</ion-option>
+          <ion-option value="I">I</ion-option>
+          <ion-option value="J">J</ion-option>
+          <ion-option value="S-A">S-A</ion-option>
+          <ion-option value="S-B">S-B</ion-option>
+          <ion-option value="FINAL">FINAL</ion-option>
+        </ion-select>
+      </ion-item>
   
         <ion-label class="label">ESCOGER CANTIDAD DE EQUIPOS</ion-label>
       <ion-item  class="item" style="background-color: #000000ce ; color: #ffffff">

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the JornadasCreationPage page.
@@ -20,19 +21,34 @@ export class JornadasCreationPage {
   teams='';
   p_region:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alerta: AlertController) {
   
    this.p_region=navParams.get('region');
+   if (this.p_region== undefined) {
+    this.navCtrl.push(HomePage);
+  }
   }
 
  
   
   JornadasCreationAdminPage() {
- 
+
+    if(this.division=="" || this.group==""){
+      console.log(this.division);
+      const alert = this.alerta.create({
+        message: 'POR FAVOR INGRESE LOS DATOS CORRESPONDIENTES',
+        buttons: ['ACCEPTAR']
+      });
+  
+       alert.present();
+
+
+    }else{
+
     this.navCtrl.push("JornadasCreationAdminPage",{region:this.p_region,division:this.division,group:this.group,teams:this.teams});
   }
 
-  
+}
 
   
 }
