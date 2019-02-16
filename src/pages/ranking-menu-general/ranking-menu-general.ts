@@ -18,23 +18,21 @@ export class RankingMenuGeneralPage {
   public division = '';
   public group = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public alerta:AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alerta: AlertController) {
   }
 
-   JornadasReviewPage() {
-    console.log(this.division);
-    if(this.region=="" || this.division==""){
+  JornadasReviewPage() {
+    console.log(this.division + "division");
+    if (this.region == '' || this.division == '') {
       console.log(this.division);
       const alert = this.alerta.create({
         message: 'PORFAVOR INGRESE LOS DATOS CORRESPONDIENTES',
-        buttons: ['ACCEPTAR']
+        buttons: ['ACEPTAR']
       });
-  
-       alert.present();
-
-
-    }else{
-    this.navCtrl.push("RankingPage", { region: this.region, division: this.division, group: this.group });
+      alert.present();
+    } else {
+      console.log(this.division + "division");
+      this.navCtrl.push("RankingPage", { region: this.region, division: this.division, group: this.group });
+    }
   }
-   }
 }
