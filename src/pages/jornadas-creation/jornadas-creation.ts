@@ -24,6 +24,7 @@ export class JornadasCreationPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public alerta: AlertController) {
   
    this.p_region=navParams.get('region');
+   console.log(this.p_region);
    if (this.p_region== undefined) {
     this.navCtrl.push(HomePage);
   }
@@ -32,7 +33,7 @@ export class JornadasCreationPage {
  
   
   JornadasCreationAdminPage() {
-
+    console.log(this.division);
     if(this.division=="" || this.group==""){
       console.log(this.division);
       const alert = this.alerta.create({
