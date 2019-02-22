@@ -86,7 +86,6 @@ export class HomePage {
           this.navCtrl.push('AdminMenuPage');
         }
         if (data[0].role == "manager" && data[0].programaStatus == "1" && data[0].status!='bloqueado') {
-          console.log(data[0].name);
           this.region = data[0].name;
           this.navCtrl.push('ManagersMenuPage', { region: this.region });
         }

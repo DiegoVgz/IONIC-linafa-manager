@@ -46,7 +46,7 @@
   }
   
   .label{
-    font-size: calc(80% + 0.8vw);
+    font-size: calc(100% + 1.2vw);
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px 8px ;
@@ -56,14 +56,14 @@
   
   .button{
     width: calc(25% + 0.2vw);
-    font-size:calc(45% + 1.0vw);
+    font-size:calc(100% + 1.0vw);
     padding: 25px 20px ;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     border: 1px solid #000000;
     background: #0b3b96;
-    min-width: 40%;
+    min-width: 80%;
   }
   
   .littlebutton{
@@ -100,12 +100,15 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  width: calc(20% + 0.2vw);
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
   border-radius: 10px;
   border: 1px solid #000000;
   background-color: forestgreen;
-  font-size:calc(45% + 1.0vw);
+  min-width: 80%;
+  font-size:calc(90% + 1.0vw);
+  padding: 8px 2px 4px 4px ;
   
 }
 

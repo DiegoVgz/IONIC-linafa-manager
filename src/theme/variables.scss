@@ -33,6 +33,10 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+$select-md-placeholder-color:	 #f4f4f4;
+$select-ios-placeholder-color:	 #f4f4f4;
+$select-wp-placeholder-color:	 #f4f4f4;
+
 $colors: (
   primary:    #488aff,
   secondary:  #32db64,

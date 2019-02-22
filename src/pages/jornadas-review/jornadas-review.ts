@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import config from '../../config/production.js';
+
 
 /**
  * Generated class for the JornadasReviewPage page.
@@ -40,7 +42,7 @@ export class JornadasReviewPage {
     }
 
     getJornadas() {
-        let url = 'http://localhost:3000/jornadas/send_to_publish';
+        let url = `${config.app.url}/jornadas/send_to_publish`;
         let datos = {
             "region": this.p_region,
             "division": this.p_division,
@@ -74,7 +76,7 @@ export class JornadasReviewPage {
 
 
 
-        let url = 'http://localhost:3000/jornadas/jornadasSecondRound';
+        let url = `${config.app.url}/jornadas/jornadasSecondRound`;
         let datos = {
             "region": this.p_region,
             "division": this.p_division,
@@ -117,7 +119,7 @@ export class JornadasReviewPage {
 
         console.log(this.jsonData);
 
-        this.data3 = this.http.post('http://localhost:3000/jornadas/insertJornadasTwo', this.jsonData);
+        this.data3 = this.http.post(`${config.app.url}/jornadas/insertJornadasTwo`, this.jsonData);
         this.data3.subscribe(data => {
 
 

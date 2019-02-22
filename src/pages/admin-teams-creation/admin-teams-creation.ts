@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { HomePage } from '../home/home';
+import config from '../../config/production.js';
+
 
 /**
  * Generated class for the AdminTeamsCreationPage page.
@@ -48,7 +50,7 @@ export class AdminTeamsCreationPage {
       alert.present();
     } else {
 
-      let url = 'http://localhost:3000/teams/addTeam';
+      let url = `${config.app.url}/teams/addTeam`;
 
       this.data = this.http.post(url, this.insertingTeam);
       this.data.subscribe(data => {

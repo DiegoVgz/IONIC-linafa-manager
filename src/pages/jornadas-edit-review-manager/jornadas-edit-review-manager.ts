@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import config from '../../config/production.js';
+
 
 /**
  * Generated class for the JornadasEditReviewManagerPage page.
@@ -45,14 +47,14 @@ export class JornadasEditReviewManagerPage {
     this.jornada.match_hour = this.time;
     this.jornada.need_revision = false;
     this.jornada.published = true;
-    this.data = this.http.post('http://localhost:3000/jornadas/editarJornadas', this.jornada);
+    this.data = this.http.post(`${config.app.url}/jornadas/editarJornadas`, this.jornada);
     this.data.subscribe(data => {
 
     });
 
 
     console.log(this.jornada);
-    this.data = this.http.post('http://localhost:3000/jornadas/ranking', this.jornada);
+    this.data = this.http.post(`${config.app.url}/jornadas/ranking`, this.jornada);
     this.data.subscribe(data => {
 
     });
@@ -62,7 +64,7 @@ export class JornadasEditReviewManagerPage {
 
   reverse() {
 
-    this.data = this.http.post('http://localhost:3000/jornadas/reverseRanking', this.jornada);
+    this.data = this.http.post(`${config.app.url}/jornadas/reverseRanking`, this.jornada);
     this.data.subscribe(data => {
 
     });

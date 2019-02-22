@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ManagersMenuPage page.
@@ -16,8 +17,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ManagersMenuPage {
 
   region='';
+  region2='';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  this.region = navParams.get('region');
+  this.region2 = navParams.get('region');
+  if(this.region2==undefined || this.region2==''){
+    if (this.region== undefined) {
+      this.navCtrl.push(HomePage);
+    }
+  }else{
+    this.region=this.region2;
+  }
+
+  console.log(this.region);
+
   }
 
 

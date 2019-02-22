@@ -13,66 +13,98 @@
     <b>CREAR JORNADAS</b>
 
   </div>
+  <div class="row-label">
+    <ion-label class="label">INGERESE LOS EQUIPOS</ion-label>
+  </div>
 
-    <ion-label class="label">INGERESE LOS NOMBRES DE LOS EQUIPOS</ion-label>
+  <div>
+    <ion-label class="label">ESCOGER EQUIPO 1</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select [(ngModel)]="team1" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+      <div>
+      <ion-label class="label">ESCOGER EQUIPO 2</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select  [(ngModel)]="team2" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+
+      <div>
+      <ion-label class="label">ESCOGER EQUIPO 3</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select disabled="{{disableVariable2}}" [(ngModel)]="team3" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+
+      <div>
+      <ion-label class="label">ESCOGER EQUIPO 4</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select disabled="{{disableVariable2}}" [(ngModel)]="team4" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+
+      <div>
+      <ion-label class="label">ESCOGER EQUIPO 5</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select disabled="{{disableVariable3}}" [(ngModel)]="team5" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+
+      <div>
+      <ion-label class="label">ESCOGER EQUIPO 6</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select disabled="{{disableVariable3}}"  [(ngModel)]="team6" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+
+      <div>
+      <ion-label class="label">ESCOGER EQUIPO 7</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select disabled="{{disableVariable4}}" [(ngModel)]="team7" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+
+      <div>
+      <ion-label class="label">ESCOGER EQUIPO 8</ion-label>
+      <ion-item style="background-color: #000000ce; color: #ffffff">
+        <ion-select disabled="{{disableVariable4}}" [(ngModel)]="team8" cancelText="CANCELAR" okText="ACEPTAR" placeholder="SELECCIONE" class="drop-menu"
+          style="background-color: #15ad29ce; color: #ffffff">
+        </ion-select>
+      </ion-item>
+      </div>
+
+
+    
+
+
+
+
+
+    
+
   
-
-
-    <div class="form">
-      <div class="row-label">
-        <ion-label floating class="layout">EQUIPO 1</ion-label>
-      </div>  
-      <div class="row-input">
-        <ion-input class="holder" type="text" [(ngModel)]="team1"></ion-input>
-      </div>
-     <div class="row-label">
-        <ion-label floating class="layout">EQUIPO 2</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team2"></ion-input>
-        <ion-label floating class="layout">EQUIPO 3</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team3"></ion-input>
-        <ion-label floating class="layout">EQUIPO 4</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team4"></ion-input>
-        <ion-label floating class="layout">EQUIPO 5</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team5"></ion-input>
-        <ion-label floating class="layout">EQUIPO 6</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team6"></ion-input>
-        <ion-label floating class="layout">EQUIPO 7</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team7"></ion-input>
-        <ion-label floating class="layout">EQUIPO 8</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team8"></ion-input>
-        <ion-label floating class="layout">EQUIPO 9</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team9"></ion-input>
-        <ion-label floating class="layout">EQUIPO 10</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team10"></ion-input>
-        <ion-label floating class="layout">EQUIPO 11</ion-label>
-      </div> 
-      <div class="row-input">    
-        <ion-input class="holder" type="text" [(ngModel)]="team11"></ion-input>
-        <ion-label floating class="layout">EQUIPO 12</ion-label>
-      </div> 
-      <div class="row-input">     
-        <ion-input class="holder" type="text" [(ngModel)]="team12"></ion-input>
-      </div>
-        
-      </div>
 
   <div class="row-button">
     <button ion-button class="botton" color="secondary" (click)="postJornadas()">CREAR</button>

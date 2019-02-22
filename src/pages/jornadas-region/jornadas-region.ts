@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the JornadasRegionPage page.
@@ -20,6 +21,10 @@ export class JornadasRegionPage {
   public division: '';
   public group: '';
   constructor(public navCtrl: NavController, public navParams: NavParams, public alerta: AlertController) {
+    if (this.region== undefined) {
+      this.navCtrl.push(HomePage);
+      
+    }
   }
 
 

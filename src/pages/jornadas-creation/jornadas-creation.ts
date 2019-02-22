@@ -19,21 +19,22 @@ export class JornadasCreationPage {
   division='';
   group='';
   teams='';
+  newJornada='true';
   p_region:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alerta: AlertController) {
   
    this.p_region=navParams.get('region');
-   console.log(this.p_region);
-   if (this.p_region== undefined) {
+   if (this.p_region== undefined || this.p_region== "") {
     this.navCtrl.push(HomePage);
   }
+  console.log(this.p_region);
   }
 
  
   
   JornadasCreationAdminPage() {
-    console.log(this.division);
+
     if(this.division=="" || this.group==""){
       console.log(this.division);
       const alert = this.alerta.create({
@@ -46,7 +47,7 @@ export class JornadasCreationPage {
 
     }else{
 
-    this.navCtrl.push("JornadasCreationAdminPage",{region:this.p_region,division:this.division,group:this.group,teams:this.teams});
+    this.navCtrl.push("JornadasCreationAdminPage",{region:this.p_region,division:this.division,group:this.group,teams:this.teams,newJornada:this.newJornada});
   }
 
 }

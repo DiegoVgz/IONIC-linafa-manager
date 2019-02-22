@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import config from '../../config/production.js';
+
 
 /**
  * Generated class for the RankingPage page.
@@ -38,7 +40,7 @@ export class RankingPage {
   showRanking(){
 
 
-    let url = 'http://localhost:3000/jornadas/showRanking';
+    let url = `${config.app.url}/jornadas/showRanking`;
     let datos = {
         "region" : this.p_region,
         "division" : this.p_division,
@@ -56,7 +58,7 @@ export class RankingPage {
   showRankingGeneral(){
 
 
-    let url = 'http://localhost:3000/jornadas/showGeneralRanking';
+    let url = `${config.app.url}/jornadas/showGeneralRanking`;
     let datos = {
         "region" : this.p_region,
         "division" : this.p_division

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import config from '../../config/production.js';
+
 
 /**
  * Generated class for the JornadasEditUsersAdminPage page.
@@ -45,7 +47,7 @@ export class JornadasEditUsersAdminPage {
     }
 
     console.log(this.name);
-    this.data = this.http.post('http://localhost:3000/user', user);
+    this.data = this.http.post(`${config.app.url}/user`, user);
     this.data.subscribe(data => {
 
     });
