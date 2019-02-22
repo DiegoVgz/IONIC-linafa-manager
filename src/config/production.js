@@ -1,7 +1,7 @@
 module.exports = {
     app: {
       name: 'Linafa Manager',
-      url: 'http://10.64.11.20:3000',
+      url: 'http://192.168.100.6:3000',
     }
   };
 
